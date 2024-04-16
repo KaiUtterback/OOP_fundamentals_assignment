@@ -1,0 +1,42 @@
+[
+    {
+        "name": "City Hall",
+        "address": "101 Center Plaza"
+    },
+    {
+        "name": "Central Library",
+        "address": "502 Main Street"
+    },
+    {
+        "name": "Museum of Natural History",
+        "address": "250 Park Avenue"
+    },
+    {
+        "name": "Tech Innovation Center",
+        "address": "130 Tech Parkway"
+    },
+    {
+        "name": "Riverside Convention Center",
+        "address": "400 River Road"
+    },
+    {
+        "name": "Grand Opera House",
+        "address": "828 Broadway"
+    },
+    {
+        "name": "City Hospital",
+        "address": "100 Health Blvd"
+    },
+    {
+        "name": "Greenwood High School",
+        "address": "201 Education Lane"
+    },
+    {
+        "name": "Fire Station No. 7",
+        "address": "711 Emergency Avenue"
+    },
+    {
+        "name": "Market Street Mall",
+        "address": "500 Market Street"
+    }
+]

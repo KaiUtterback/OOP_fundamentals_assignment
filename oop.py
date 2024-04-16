@@ -200,3 +200,107 @@ Problem Statement:
  Create a Building class and write a script to save and load building details to and from a file.
 
 '''
+
+import json
+
+class Building:
+    def __init__(self, name, address):
+        self.name = name
+        self.address = address
+
+    def to_dict(self):
+        return {'name': self.name, 'address': self.address}
+
+def save_to_json(buildings, filename):
+    try:
+        building_dicts = [building.to_dict() for building in buildings]
+        with open(filename, 'w') as file:
+            json.dump(building_dicts, file)
+        print("Buildings saved successfully.")
+    except Exception as e:
+        print(f"Failed to save buildings: {e}")
+
+def load_from_json(filename):
+    try:
+        with open(filename, 'r') as file:
+            buildings_data = json.load(file)
+        return [Building(data['name'], data['address']) for data in buildings_data]
+    except FileNotFoundError:
+        print("File not found. Please check the filename and try again.")
+        return []
+    except json.JSONDecodeError:
+        print("Error decoding JSON. Please check the file content.")
+        return []
+    except Exception as e:
+        print(f"An error occurred while loading the file: {e}")
+        return []
+
+def display_buildings(buildings):
+    if buildings:
+        print("Currently loaded buildings:")
+        for index, building in enumerate(buildings, start=1):
+            print(f"{index}. Name: {building.name}, Address: {building.address}")
+    else:
+        print("No buildings are currently loaded.")
+
+def main():
+    buildings = []  
+    while True:
+        try:
+            action = input("\nChoose an action - 'add', 'save', 'load', 'display', or 'exit': ").strip().lower()
+            if action == 'exit':
+                break
+            elif action == 'add':
+                name = input("Enter the building's name: ")
+                address = input("Enter the building's address: ")
+                buildings.append(Building(name, address))
+                print("Building added. Remember to save to keep changes.")
+            elif action == 'save':
+                if buildings:
+                    filename = input("Enter the filename to save to (e.g., 'buildings.json'): ")
+                    save_to_json(buildings, filename)
+                else:
+                    print("No buildings to save.")
+            elif action == 'load':
+                filename = input("Enter the filename to load from (e.g., 'buildings.json'): ")
+                buildings = load_from_json(filename)
+            elif action == 'display':
+                display_buildings(buildings)
+            else:
+                print("Invalid action. Please type 'add', 'save', 'load', 'display', or 'exit'.")
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+main()
+
+''' 3. City Services Simulation: Python OOP and Modular Design
+Objective:
+This assignment aims to strengthen your skills in Python Object-Oriented Programming (OOP) and modular programming by building a simulation of city services. 
+The focus will be on using class variables and organizing code into modules, simulating services like public transportation, park management, and city utilities.
+
+Task 1: Public Transportation Module
+
+Problem Statement: Develop a Bus class as part of a public transportation module. Use class variables to represent common attributes like city name and base fare. 
+Implement instance variables for specific attributes like route number and passenger capacity. Expected Outcome: A Bus class with both class and instance variables, 
+and a transportation module to manage different bus routes. A test script should demonstrate creating bus instances and accessing both class and instance attributes.
+
+'''
+
+# Define the Bus class within a transportation module concept
+
+class Bus:
+    city_name = "Sioux Falls"
+    base_fare = 2.50
+
+    def __init__(self, route_number, passenger_capacity):
+        self.route_number = route_number
+        self.passenger_capacity = passenger_capacity
+
+    def __repr__(self):
+        return f"\nRoute number = {self.route_number} \nPassenger capacity = {self.passenger_capacity})"
+
+
+bus1 = Bus(101, 40)
+bus2 = Bus(102, 30)
+print(bus1)
+print(bus2)
+print(f"\nOperating in {Bus.city_name} with base fare {Bus.base_fare}")
