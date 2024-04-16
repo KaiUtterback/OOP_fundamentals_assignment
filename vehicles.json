@@ -1,0 +1,32 @@
+{
+    "012567": {
+        "owner": "Kai Utterback",
+        "reg_num": "012567",
+        "type": "Kia K5 GT"
+    },
+    "4513687": {
+        "owner": "TJ Robby",
+        "reg_num": "4513687",
+        "type": "Dodge Charger"
+    },
+    "45612d": {
+        "owner": "Bob Jones",
+        "reg_num": "45612d",
+        "type": "Toyota Tundra"
+    },
+    "ABC123": {
+        "owner": "John Doe",
+        "reg_num": "ABC123",
+        "type": "Toyota Corolla"
+    },
+    "DEF456": {
+        "owner": "Alice Johnson",
+        "reg_num": "DEF456",
+        "type": "Ford Escape"
+    },
+    "XYZ789": {
+        "owner": "Shana Smith",
+        "reg_num": "XYZ789",
+        "type": "Honda Civic"
+    }
+}

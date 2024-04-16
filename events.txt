@@ -1,0 +1,4 @@
+Event,Date,Location,Participants Count,Participants
+Music Festival,2024-09-20,Open Air Grounds,3,Daisy Lane,Eric Foster,Gina Hops
+Book Fair,2024-10-05,Library Complex,3,Hannah Sprout,Ivan Gregg,Jenny Tsui
+Science Conference,2024-11-25,Science Center,3,Karl Norman,Liam Creek,Mona Patel
